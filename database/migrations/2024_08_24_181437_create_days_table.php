@@ -15,7 +15,7 @@ return new class extends Migration
         Schema::create('days', function (Blueprint $table) {
             $table->id();
             $table->foreignIdFor(Travel::class)->nullable()->costrained()->cascadeOnDelete();
-            $tabel->string('name')->unique();
+            $table->string('name')->unique();
             $table->timestamps();
         });
     }
