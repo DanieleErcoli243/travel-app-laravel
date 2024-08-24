@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Days;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -13,6 +14,13 @@ return new class extends Migration
     {
         Schema::create('stages', function (Blueprint $table) {
             $table->id();
+            $table->foreignIdFor(Days::class)->nullable()->costrained()->cascadeOnDelete();
+            $tabel->string('title');
+            $table->text('description');
+            $table->date('date');
+            $table->string('image')->nullable();
+            $table->string('food')->nullable();
+            $table->string('interests')->nullable();
             $table->timestamps();
         });
     }
