@@ -14,7 +14,7 @@ class DatabaseSeeder extends Seeder
     {
         // \App\Models\User::factory(10)->create();
 
-        \App\Models\Travel::factory(2)->create();
+      
         \App\Models\Stage::factory(10)->create();
         \App\Models\day::factory(10)->create();
 
@@ -22,5 +22,7 @@ class DatabaseSeeder extends Seeder
             'name' => 'Test User',
             'email' => 'test@example.com',
         ]);
+
+        $this->call([TravelSeeder::class]);
     }
 }
