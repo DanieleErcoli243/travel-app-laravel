@@ -10,6 +10,13 @@
 
     <title>{{ env('APP_NAME') }}</title>
 
+    <!-- visibilità -->
+     <style>
+        body{
+            visibility: hidden;
+        }
+     </style>
+
     <!-- icon -->
     <link rel="icon" type="image/png" href="{{ Vite::asset('resources/img/travel-app-logo.png') }}">
 
