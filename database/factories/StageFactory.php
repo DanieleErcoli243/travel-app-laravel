@@ -21,12 +21,12 @@ class StageFactory extends Factory
         $day_ids = Day::pluck('id')->toArray();
         $day_ids[]= null;
         return [
-            'title' => fake()->
-            'description' => fake()->
-            'date' => fake()->
-            'image' => fake()->
-            'food' => fake()->
-            'interests' => fake()->
+            'title' => fake()->words(2, true),
+            'description' => fake()->paragraph(3, true),
+            'date' => fake()->date('Y-m-d'),
+            'image' => fake()->imageUrl(),
+            'food' => fake()->word(),
+            'interests' => fake()->words(3, true),
         ];
     }
 }
