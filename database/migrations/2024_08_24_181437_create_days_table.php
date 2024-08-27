@@ -17,6 +17,7 @@ return new class extends Migration
             $table->foreignIdFor(Travel::class)->nullable()->costrained()->cascadeOnDelete();
             $table->string('name');
             $table->timestamps();
+            $table->softDelete();
         });
     }
 

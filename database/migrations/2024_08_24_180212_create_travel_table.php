@@ -14,8 +14,9 @@ return new class extends Migration
         Schema::create('travel', function (Blueprint $table) {
             $table->id();
             $table->string('destination')->unique();
-            $table->string('slug')->unique();
+            
             $table->timestamps();
+            $table->softDelete();
         });
     }
 
