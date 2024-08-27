@@ -32,7 +32,7 @@ Route::prefix('/admin')->name('admin.')->middleware('auth')->group(function () {
     Route::post('/travel', [WordController::class, 'store'])->name('travel.store');
     Route::get('/travel/{travel}/edit', [WordController::class, 'edit'])->name('travel.edit')->withTrashed();
     Route::put('/travel/{travel}', [WordController::class, 'update'])->name('travel.update')->withTrashed();
-    Route::delete('/travel/{word}', [WordController::class, 'destroy'])->name('travel.destroy');
+    Route::delete('/travel/{travel}', [WordController::class, 'destroy'])->name('travel.destroy');
 });
 
 
