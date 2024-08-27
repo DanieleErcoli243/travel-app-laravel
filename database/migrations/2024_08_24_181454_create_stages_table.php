@@ -22,7 +22,7 @@ return new class extends Migration
             $table->string('food')->nullable();
             $table->string('interests')->nullable();
             $table->timestamps();
-            $table->softDelete();
+            $table->softDeletes();
         });
     }
 
