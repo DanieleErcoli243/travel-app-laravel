@@ -16,7 +16,12 @@ class DatabaseSeeder extends Seeder
 
       
         
-        $this->call([TravelSeeder::class]);
+        $this->call(TravelSeeder::class);
+
+        App\Models\Day::factory(14)->create([
+            'name'=>fake()->dayOfWeek(),
+        ]);
+        App\Models\Stage::factory(14)->create();
 
         \App\Models\User::factory()->create([
             'name' => 'Test User',
