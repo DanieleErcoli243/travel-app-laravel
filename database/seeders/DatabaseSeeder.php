@@ -17,12 +17,12 @@ class DatabaseSeeder extends Seeder
       
         \App\Models\Stage::factory(10)->create();
         \App\Models\day::factory(10)->create();
+        $this->call([TravelSeeder::class]);
 
         \App\Models\User::factory()->create([
             'name' => 'Test User',
             'email' => 'test@example.com',
         ]);
 
-        $this->call([TravelSeeder::class]);
     }
 }
