@@ -36,7 +36,7 @@
             <div class="container">
                 <a class="navbar-brand d-flex align-items-center" href="{{ url('/') }}">
                     
-                    {{-- env('app.name', 'Laravel') --}}
+                    <img class="img-fluid" src="{{ Vite::asset('resources/img/travel-app-logo.png') }}" alt="Logo di una valigia che si apre a diario">
                 </a>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">

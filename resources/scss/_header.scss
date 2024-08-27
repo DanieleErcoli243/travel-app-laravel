@@ -1,4 +1,10 @@
 nav {
     border-bottom: 1px solid orange;
     color: orange;
+    height: 80px;
+
+    .nav-link {
+        color: orange;
+        font-size: 24px;
+    }
 }
