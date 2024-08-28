@@ -4,7 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Admin\HomeController as AdminHomeController;
-use App\Http\Controllers\Admin\TravelController as AdminTravelController;
+use App\Http\Controllers\Admin\TravelController as AdminTravelsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,13 +27,13 @@ Route::prefix('/admin')->name('admin.')->middleware('auth')->group(function () {
     Route::get('/', AdminHomeController::class)->name('home');
 
     // rotte per le CRUD dei viaggi
-    Route::get('/travel', [AdminTravelController::class, 'index'])->name('travel.index');
-    Route::get('/travel/create', [AdminTravelController::class, 'create'])->name('travel.create');
-    Route::get('/travel/{travel}', [AdminTravelController::class, 'show'])->name('travel.show')->withTrashed();
-    Route::post('/travel', [AdminTravelController::class, 'store'])->name('travel.store');
-    Route::get('/travel/{travel}/edit', [AdminTravelController::class, 'edit'])->name('travel.edit')->withTrashed();
-    Route::put('/travel/{travel}', [AdminTravelController::class, 'update'])->name('travel.update')->withTrashed();
-    Route::delete('/travel/{travel}', [AdminTravelController::class, 'destroy'])->name('travel.destroy');
+    Route::get('/travel', [AdminTravelsController::class, 'index'])->name('travel.index');
+    Route::get('/travel/create', [AdminTravelsController::class, 'create'])->name('travel.create');
+    Route::get('/travel/{travel}', [AdminTravelsController::class, 'show'])->name('travel.show')->withTrashed();
+    Route::post('/travel', [AdminTravelsController::class, 'store'])->name('travel.store');
+    Route::get('/travel/{travel}/edit', [AdminTravelsController::class, 'edit'])->name('travel.edit')->withTrashed();
+    Route::put('/travel/{travel}', [AdminTravelsController::class, 'update'])->name('travel.update')->withTrashed();
+    Route::delete('/travel/{travel}', [AdminTravelsController::class, 'destroy'])->name('travel.destroy');
 });
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
