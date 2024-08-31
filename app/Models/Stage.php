@@ -11,4 +11,5 @@ class Stage extends Model
 {
     use HasFactory;
     use SoftDeletes;
+    protected $fillable = ['title', 'description', 'date', 'image', 'food', 'interests'];
 }
